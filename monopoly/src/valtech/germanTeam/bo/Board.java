@@ -16,7 +16,7 @@ public class Board {
 		
 		//Create the first space, which is the one Board has
 		
-		startSpace = new Space("1");
+		startSpace = new Space("GO");
 		
 		/*
 		 * memorySpace remembers what was the second space 

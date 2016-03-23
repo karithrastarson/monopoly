@@ -11,7 +11,7 @@ public class Game implements IGame{
 	private Die die1;
 	private Die die2;
 	
-	public Game (){
+	public Game (int amountOfPlayers){
 		super();
 		
 	}
