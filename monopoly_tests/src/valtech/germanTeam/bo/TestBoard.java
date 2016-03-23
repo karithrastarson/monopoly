@@ -40,12 +40,15 @@ public class TestBoard {
 		counter++;
 		do
 		{
-			counter++;
 			runner = runner.getNextSpace();
+			if(!runner.toString().equals("GO")){
+			counter++;
+			}
+
 		}
 		while(!runner.toString().equals("GO"));
 		
-		
+		System.out.println(counter);
 		assertEquals(40, counter);
 	}
 

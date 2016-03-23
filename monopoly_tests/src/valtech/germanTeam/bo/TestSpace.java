@@ -9,9 +9,9 @@ public class TestSpace {
 	@Test
 	public void testToString() {
 		Space sp1 = new Space("1");
-		//String s = sp1;
+		String s = sp1.toString();
 		
-		//assertEquals(s, "1");
+		assertEquals(s, "1");
 	}
 	
 	@Test
