@@ -33,10 +33,7 @@ public class Board {
 			//Connect the last space to this new one
 			memorySpace.setNextSpace(sp1);
 			
-			
-			Space sp2 = new Space(Integer.toString(i+1));
-			sp1.setNextSpace(sp2);
-			memorySpace = sp2;
+			memorySpace = sp1;
 		}
 		memorySpace.setNextSpace(startSpace);
 	}
