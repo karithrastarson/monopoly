@@ -5,9 +5,10 @@ import valtech.germanTeam.bo.Player;
 public interface IGame {
 
 	void startGame();
-	void addPlayer(Player p);
-	void removePlayer(Player p);
 	void initBoard();
 	void initDie();
+	void addPlayer(Player p, int position);
+	void removePlayer(int position);
+	void doRound();
 
 }
