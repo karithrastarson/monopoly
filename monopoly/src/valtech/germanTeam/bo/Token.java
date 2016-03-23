@@ -2,11 +2,10 @@ package valtech.germanTeam.bo;
 
 public class Token {
 	
-	Space currentSpace;
-	TokenShape shape;
+	private Space currentSpace;
+	private TokenShape shape;
 
 	public Token(TokenShape shape) {
-		super();
 		this.shape = shape;
 	}
 	/*
@@ -23,7 +22,6 @@ public class Token {
 	public void setCurrentSpace(Space currentSpace) {
 		this.currentSpace = currentSpace;
 	}
-	
 	
 	@Override
 	public String toString(){

@@ -6,12 +6,12 @@ package valtech.germanTeam.bo;
 
 public class Player {
 	
-	Token token;
+	private Token token;
+	private int budget;
 	
-	int budget;
-	
-	public Player(Token token) {
-		this.token = token;
+	public Player(TokenShape name) {
+		
+		token = new Token(name);
 	}
 	/*
 	 * sets the token forward step by step
