@@ -5,14 +5,16 @@ public class Token {
 	private Space currentSpace;
 	private TokenShape shape;
 
-	public Token(TokenShape shape) {
+	public Token(TokenShape shape, Space startingPosition) {
 		this.shape = shape;
+		this.currentSpace = startingPosition;
 	}
 	/*
 	 * sets the Token forward by one Space
 	 */
 	public void stepOneForward(){
 		this.currentSpace = currentSpace.getNextSpace();
+		System.out.println(currentSpace.toString()+ "   "+ shape.toString());
 	}
 
 	public Space getCurrentSpace() {

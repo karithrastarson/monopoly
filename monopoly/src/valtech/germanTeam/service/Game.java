@@ -18,10 +18,10 @@ public class Game implements IGame{
 	public Game (int amountOfPlayers){
 		super();
 		
-		
+			initBoard();
 			initPlayers(amountOfPlayers);
 			initDie();
-			initBoard();	
+				
 			
 	}
 
@@ -38,7 +38,8 @@ public class Game implements IGame{
 		playerList = new Player[amountOfPlayers];
 		
 		for(int i = 0; i < amountOfPlayers; i++){
-			Player p = new Player(TokenShape.values()[i]);
+			Player p = new Player(TokenShape.values()[i + 1], board.getStartSpace() );
+		
 			addPlayer(p, i);
 		}
 		
@@ -48,6 +49,7 @@ public class Game implements IGame{
 	public void startGame() {
 		for(int i = 0; i <20; i++){
 			doRound();
+			System.out.println(i);
 		}
 		
 		
@@ -67,6 +69,7 @@ public class Game implements IGame{
 	 */
 	public void doTurn(Player p){
 		int throwCount = p.throwDice(die1, die2);
+		System.out.println("Player " + p.getToken().toString() + " get throw count "  + throwCount);
 		p.moveToken(throwCount);
 	}
 	

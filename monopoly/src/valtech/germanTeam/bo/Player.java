@@ -9,9 +9,9 @@ public class Player {
 	private Token token;
 	private int budget;
 	
-	public Player(TokenShape name) {
+	public Player(TokenShape name, Space startingPosition) {
 		
-		token = new Token(name);
+		token = new Token(name, startingPosition);
 	}
 	/*
 	 * sets the token forward step by step
@@ -21,7 +21,12 @@ public class Player {
 			token.stepOneForward();
 		}
 	}
-
+	
+	public Token getToken(){
+		return token;
+	}
+	
+	
 	public int getBudget() {
 		return budget;
 	}
