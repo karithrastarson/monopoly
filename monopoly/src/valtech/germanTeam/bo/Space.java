@@ -16,13 +16,12 @@ public class Space {
 
 
 	public void setNextSpace(Space space) {
-		// TODO Auto-generated method stub
 		
 	}
 
 
 	public Space getNextSpace() {
-		// TODO Auto-generated method stub
+		
 		return null;
 	}
 }
