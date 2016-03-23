@@ -5,6 +5,7 @@ import java.util.List;
 import valtech.germanTeam.bo.Board;
 import valtech.germanTeam.bo.Die;
 import valtech.germanTeam.bo.Player;
+import valtech.germanTeam.bo.TokenShape;
 
 public class Game implements IGame{
 	
@@ -16,12 +17,33 @@ public class Game implements IGame{
 	
 	public Game (int amountOfPlayers){
 		super();
-		playerList = new Player[amountOfPlayers];
-		initDie();
-		initBoard();
 		
+		
+			initPlayers(amountOfPlayers);
+			initDie();
+			initBoard();	
+			
 	}
 
+	public void initPlayers(int amountOfPlayers){
+		
+		if(2  < amountOfPlayers && amountOfPlayers > 9){
+			try {
+				throw new Exception();
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		} 
+		playerList = new Player[amountOfPlayers];
+		
+		for(int i = 0; i < amountOfPlayers; i++){
+			Player p = new Player(TokenShape.values()[i]);
+			addPlayer(p, i);
+		}
+		
+	}
+	
 	@Override
 	public void startGame() {
 		for(int i = 0; i <20; i++){
