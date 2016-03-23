@@ -2,17 +2,21 @@ package valtech.germanTeam.service;
 
 import java.util.List;
 
+import valtech.germanTeam.bo.Board;
 import valtech.germanTeam.bo.Die;
 import valtech.germanTeam.bo.Player;
 
 public class Game implements IGame{
 	
+	private Board board;
 	private Player[] playerList;
 	private Die die1;
 	private Die die2;
+	private final int NUMBER_OF_TURNS = 20;
 	
 	public Game (int amountOfPlayers){
 		super();
+		playerList = new Player[amountOfPlayers];
 		initDie();
 		initBoard();
 		
@@ -20,7 +24,9 @@ public class Game implements IGame{
 
 	@Override
 	public void startGame() {
-		
+		for(int i = 0; i <20; i++){
+			doRound();
+		}
 		
 		
 	}
@@ -62,7 +68,7 @@ public class Game implements IGame{
 
 	@Override
 	public void initBoard() {
-		// TODO Auto-generated method stub
+		board = new Board();
 		
 	}
 	public void initDie(){
