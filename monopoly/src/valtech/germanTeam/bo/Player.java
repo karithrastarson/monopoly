@@ -13,6 +13,14 @@ public class Player {
 	public Player(Token token) {
 		this.token = token;
 	}
+	/*
+	 * sets the token forward step by step
+	 */
+	public void moveToken(int numberOfSteps){
+		for(int i = 0; i < numberOfSteps; i++){
+			token.stepOneForward();
+		}
+	}
 
 	public int getBudget() {
 		return Budget;

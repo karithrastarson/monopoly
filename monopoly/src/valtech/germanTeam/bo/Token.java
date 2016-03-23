@@ -1,8 +1,33 @@
 package valtech.germanTeam.bo;
 
-/*
- * Token is a expert keeping the information about the usable tokens
- */
-public enum Token {
-	DOG, IRON, SHIP, CANNON, TOP_HAT, HORSE, SHOE, CAR
+public class Token {
+	
+	Space currentSpace;
+	TokenShape shape;
+
+	public Token(TokenShape shape) {
+		super();
+		this.shape = shape;
+	}
+	/*
+	 * sets the Token forward by one Space
+	 */
+	public void stepOneForward(){
+		this.currentSpace = currentSpace.next();
+	}
+
+	public Space getCurrentSpace() {
+		return currentSpace;
+	}
+
+	public void setCurrentSpace(Space currentSpace) {
+		this.currentSpace = currentSpace;
+	}
+	
+	
+	@Override
+	public String toString(){
+		return shape.toString();
+	}
+
 }
