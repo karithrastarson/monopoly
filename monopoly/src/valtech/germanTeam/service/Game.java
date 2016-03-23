@@ -8,18 +8,18 @@ import valtech.germanTeam.bo.Player;
 public class Game implements IGame{
 	
 	private List<Player> playerList;
-	
 	private Die die1;
-	
 	private Die die2;
 	
 	public Game (){
 		super();
+		
 	}
 
 	@Override
 	public void startGame() {
-		// TODO Auto-generated method stub
+		
+		
 		
 	}
 	

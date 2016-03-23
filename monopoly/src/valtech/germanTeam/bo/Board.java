@@ -8,8 +8,10 @@ public class Board {
 	public Board()
 	{
 		//Constructor
-		
-		
+		initBoard();
+	}
+	
+	private void initBoard(){
 		//Create a linked list of spaces
 		
 		//Create the first space, which is the one Board has
@@ -34,7 +36,5 @@ public class Board {
 			memorySpace = sp2;
 		}
 		memorySpace.setNextSpace(startSpace);
-		
-		
 	}
 }
