@@ -6,7 +6,7 @@ public class Space {
 	
 	
 	public Space(String name){
-		this.spaceName = spaceName;
+		this.spaceName = name;
 		this.nextSpace = null;
 	}
 	
