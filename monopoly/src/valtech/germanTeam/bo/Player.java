@@ -7,11 +7,12 @@ package valtech.germanTeam.bo;
 public class Player {
 	
 	private Token token;
-	private int budget;
+	private float budget;
 	
 	public Player(TokenShape name, Space startingPosition) {
 		
 		token = new Token(name, startingPosition);
+		this.budget = 1500;
 	}
 	/*
 	 * sets the token forward step by step
@@ -27,7 +28,7 @@ public class Player {
 	}
 	
 	
-	public int getBudget() {
+	public float getBudget() {
 		return budget;
 	}
 

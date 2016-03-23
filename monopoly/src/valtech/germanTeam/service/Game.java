@@ -69,7 +69,7 @@ public class Game implements IGame{
 	 */
 	public void doTurn(Player p){
 		int throwCount = p.throwDice(die1, die2);
-		System.out.println("Player " + p.getToken().toString() + " get throw count "  + throwCount);
+		System.out.println("Player " + p.getToken().toString() + " get throw count "  + throwCount + " Current budget: " + p.getBudget());
 		p.moveToken(throwCount);
 	}
 	
