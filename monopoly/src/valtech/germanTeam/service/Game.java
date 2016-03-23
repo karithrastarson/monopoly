@@ -7,11 +7,11 @@ import valtech.germanTeam.bo.Player;
 
 public class Game implements IGame{
 	
-	List<Player> playerList;
+	private List<Player> playerList;
 	
-	Die die1;
+	private Die die1;
 	
-	Die die2;
+	private Die die2;
 	
 	public Game (){
 		super();
@@ -20,6 +20,10 @@ public class Game implements IGame{
 	@Override
 	public void startGame() {
 		// TODO Auto-generated method stub
+		
+	}
+	
+	public void doTurn(){
 		
 	}
 	
