@@ -8,7 +8,7 @@ public class Player {
 	
 	Token token;
 	
-	int Budget;
+	int budget;
 	
 	public Player(Token token) {
 		this.token = token;
@@ -23,15 +23,15 @@ public class Player {
 	}
 
 	public int getBudget() {
-		return Budget;
+		return budget;
 	}
 
 	public void setBudget(int budget) {
-		Budget = budget;
+		this.budget = budget;
 	}
 	
-	public int throwDice(Die die){
-		return die.generateValue();
+	public int throwDice(Die dice1, Die dice2){
+		return dice1.generateValue() + dice2.generateValue();
 	}
 	
 	@Override
