@@ -16,12 +16,12 @@ public class Space {
 
 
 	public void setNextSpace(Space space) {
-		
+		this.nextSpace = space;
 	}
 
 
 	public Space getNextSpace() {
 		
-		return null;
+		return nextSpace;
 	}
 }

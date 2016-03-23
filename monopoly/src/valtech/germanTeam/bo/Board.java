@@ -22,7 +22,10 @@ public class Board {
 		 * memorySpace remembers what was the second space 
 		 * created in last iteration of the for loop
 		 * */
-		Space memorySpace = startSpace;
+		Space spNext = new Space("1");
+		startSpace.setNextSpace(spNext);
+		
+		Space memorySpace = spNext;
 		for(int i = 2; i<40; i++){
 			
 			//Create a new space
@@ -37,4 +40,7 @@ public class Board {
 		}
 		memorySpace.setNextSpace(startSpace);
 	}
+	
+	//Getter
+	public Space getStartSpace(){return startSpace;}
 }
