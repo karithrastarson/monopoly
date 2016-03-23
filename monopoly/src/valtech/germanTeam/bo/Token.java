@@ -13,7 +13,7 @@ public class Token {
 	 * sets the Token forward by one Space
 	 */
 	public void stepOneForward(){
-		this.currentSpace = currentSpace.next();
+		this.currentSpace = currentSpace.getNextSpace();
 	}
 
 	public Space getCurrentSpace() {
