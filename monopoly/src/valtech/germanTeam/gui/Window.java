@@ -10,7 +10,8 @@ public class Window {
 	public static void main(String[] args) {
 		//This main method is in charge of running the game
 		//IGame game = new Game(2);
-		IGame game = Game.getInstance(amountOfPlayers);
+		IGame game = Game.getInstance();
+		game.initGame((short)2);
 		game.startGame();
 		
 		

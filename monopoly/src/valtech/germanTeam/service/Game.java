@@ -1,6 +1,6 @@
 package valtech.germanTeam.service;
 
-import java.util.List;
+
 
 import valtech.germanTeam.bo.Board;
 import valtech.germanTeam.bo.Die;
@@ -17,32 +17,37 @@ public class Game implements IGame{
 	
 	private static Game instance = null;
 	
-	private Game (int amountOfPlayers){
-			initBoard();
-			initPlayers(amountOfPlayers);
-			initDie();
+	private Game(){
+		super();
 	}
 	
-	public static Game getInstance(int amountOfPlayers){
+	public static Game getInstance(){
 		if(instance == null) {
-	         instance = new Game(amountOfPlayers);
+	         instance = new Game();
 	      }
 		return instance;
 	}
 	
-	public void initPlayers(int amountOfPlayers){
+	@Override
+	public void initGame(short numberOfPlayers){
+		instance.initBoard();
+		instance.initDie();
+		instance.initPlayers(numberOfPlayers);
+	}
+	
+	public void initPlayers(short amountOfPlayers){
 		
-		if(2  < amountOfPlayers && amountOfPlayers > 9){
+		/*if(2  < amountOfPlayers && amountOfPlayers > 9){
 			try {
 				throw new Exception();
 			} catch (Exception e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-		} 
+		} */
 		playerList = new Player[amountOfPlayers];
 		
-		for(int i = 0; i < amountOfPlayers; i++){
+		for(short i = 0; i < amountOfPlayers; i++){
 			Player p = new Player(TokenShape.values()[i + 1], board.getStartSpace() );
 		
 			addPlayer(p, i);
@@ -52,7 +57,7 @@ public class Game implements IGame{
 	
 	@Override
 	public void startGame() {
-		for(int i = 0; i <20; i++){
+		for(int i = 0; i < NUMBER_OF_TURNS; i++){
 			doRound();
 			System.out.println(i);
 		}
@@ -62,7 +67,6 @@ public class Game implements IGame{
 	/*
 	 * do a round in the game including all players
 	 */
-	@Override 
 	public void doRound(){
 		for(Player p :playerList){
 			doTurn(p);
@@ -81,7 +85,6 @@ public class Game implements IGame{
 	/*
 	 * add a Player to the game
 	 */
-	@Override
 	public void addPlayer(Player p, int position) {
 		this.playerList[position] = p;
 		 
@@ -90,13 +93,11 @@ public class Game implements IGame{
 	/*
 	 * remove a player from the game
 	 */
-	@Override
 	public void removePlayer(int position) {
 		this.playerList[position] = null;
 		
 	}
 
-	@Override
 	public void initBoard() {
 		board = new Board();
 		
@@ -104,6 +105,23 @@ public class Game implements IGame{
 	public void initDie(){
 		this.die1 = new Die();
 		this.die2 = new Die();
+	}
+	
+	public int getPlayerCount(){
+		return playerList.length;
+	}
+	
+	public Player[] getPlayers(){
+		return playerList;
+	}
+	
+	public Die[] getDie(){
+		Die[] dies = {die1, die2};
+		return dies;
+	}
+	
+	public Board getBoard(){
+		return board;
 	}
 
 }
