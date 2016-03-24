@@ -29,22 +29,18 @@ public class Game implements IGame{
 	}
 	
 	@Override
-	public void initGame(short numberOfPlayers){
+	public void initGame(short numberOfPlayers) throws Exception{
 		instance.initBoard();
 		instance.initDie();
 		instance.initPlayers(numberOfPlayers);
 	}
 	
-	public void initPlayers(short amountOfPlayers){
+	public void initPlayers(short amountOfPlayers) throws Exception{
 		
-		/*if(2  < amountOfPlayers && amountOfPlayers > 9){
-			try {
-				throw new Exception();
-			} catch (Exception e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-		} */
+		if(2  < amountOfPlayers && amountOfPlayers > 9){
+			throw new Exception("The Number of Players is not correct");
+			
+		} 
 		playerList = new Player[amountOfPlayers];
 		
 		for(short i = 0; i < amountOfPlayers; i++){

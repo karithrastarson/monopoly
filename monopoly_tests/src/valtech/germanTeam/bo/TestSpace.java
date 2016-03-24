@@ -8,7 +8,7 @@ public class TestSpace {
 
 	@Test
 	public void testToString() {
-		Space sp1 = new Space("1");
+		Space sp1 = new GoSpace("1", 1,1);
 		String s = sp1.toString();
 		
 		assertEquals(s, "1");
@@ -16,8 +16,8 @@ public class TestSpace {
 	
 	@Test
 	public void testSetNextSpace() {
-		Space sp1 = new Space("1");
-		Space sp2 = new Space("2");
+		Space sp1 = new GoSpace("1", 1,1);
+		Space sp2 = new GoSpace("1", 1,1);
 		
 		sp1.setNextSpace(sp2);
 		

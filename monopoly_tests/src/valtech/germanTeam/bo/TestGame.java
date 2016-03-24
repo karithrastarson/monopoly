@@ -10,16 +10,16 @@ public class TestGame {
 	
 	
 	@Test
-	public void testAddPlayer() {
+	public void testAddPlayer() throws Exception {
 		Game game = Game.getInstance();
-		Player p = new Player(TokenShape.values()[1], new Space("Test"));
+		Player p = new Player(TokenShape.values()[1], new GoSpace("Test", 1, 1));
 		game.initGame((short)2);
 		game.addPlayer(p, 0);
 		assertTrue(game.getPlayers()[0] == p);
 	}
 	
 	@Test
-	public void testRemovePlayer() {
+	public void testRemovePlayer() throws Exception {
 		Game game = Game.getInstance();
 		game.initGame((short)2);
 		game.removePlayer(0);
@@ -41,7 +41,7 @@ public class TestGame {
 	}
 
 	@Test
-	public void testInitGame() {
+	public void testInitGame() throws Exception {
 		Game game = Game.getInstance();
 		game.initGame((short)2);
 		assertTrue(game.getPlayerCount() == 2);
@@ -54,7 +54,7 @@ public class TestGame {
 	 * a exception
 	 */
 	@Test
-	public void testStartGame() {
+	public void testStartGame() throws Exception {
 		 Game game = Game.getInstance();
 		 game.initGame((short)2);
 		 game.startGame();

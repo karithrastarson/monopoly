@@ -9,9 +9,13 @@ public class Window {
 	
 	public static void main(String[] args) {
 		//This main method is in charge of running the game
-		//IGame game = new Game(2);
 		IGame game = Game.getInstance();
-		game.initGame((short)2);
+		try {
+			game.initGame((short)2);
+		} catch (Exception e) {
+			e.printStackTrace();
+			System.out.println(e.getMessage());
+		}
 		game.startGame();
 		
 		

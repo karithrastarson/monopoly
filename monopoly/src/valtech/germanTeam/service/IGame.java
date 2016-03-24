@@ -5,5 +5,5 @@
 public interface IGame {
 
 	void startGame();
-	void initGame(short numberOfPlayers);
+	void initGame(short numberOfPlayers) throws Exception;
 }
