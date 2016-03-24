@@ -32,6 +32,5 @@ public class OwnedSpace extends Space {
 	@Override
 	public float calculateRules(float value) {
 		return value-rent;
-		
 	}
 }

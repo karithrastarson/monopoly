@@ -20,7 +20,9 @@ public class Player {
 	public void moveToken(int numberOfSteps){
 		for(int i = 0; i < numberOfSteps; i++){
 			token.stepOneForward();
+			this.budget = token.budgetIfPassGo(budget);
 		}
+		this.budget = token.updateBudget(budget);
 	}
 	
 	public Token getToken(){
