@@ -21,30 +21,30 @@ public class Board {
 		 * created in last iteration of the for loop
 		 * */
 		
-		startSpace = new ActionSpace("GO", 0, 0);
+		startSpace = new GoSpace("GO", 0, 0);
 		
 		Space two = new OwnedSpace("Mediterranean Ave.", 60, 2);
-		Space  three= new ActionSpace("Community Chest", 0, 0);
+		Space  three= new EmptySpace("Community Chest", 0, 0);
 		Space four = new OwnedSpace("Baltic Ave.", 60, 4);
-		Space five = new ActionSpace("Income Tax", 200, 0);
+		Space five = new IncomeTax("Income Tax", 200, 0);
 		Space six = new OwnedSpace("Reading Rail Road", 200, 0);
 		Space seven = new OwnedSpace("Oriental Ave.", 100, 6);
-		Space eight = new ActionSpace("CHANCE", 0, 0);
+		Space eight = new EmptySpace("CHANCE", 0, 0);
 		Space nine = new OwnedSpace("Vermont Ave.", 100, 6);
 		Space ten = new OwnedSpace("Conneticut Ave.",120, 8);
-		Space eleven = new ActionSpace("Jail", 0,0);
+		Space eleven = new EmptySpace("Jail", 0,0);
 		Space twelve = new OwnedSpace("St. Charles Place", 140,10);
 		Space thirteen = new OwnedSpace("Electric Company", 150, 0);
 		Space fourteen = new OwnedSpace("States Ave.", 140, 10);
 		Space fifteen = new OwnedSpace("Virginia Ave.", 160, 12);
 		Space sixteen = new OwnedSpace("Pennsylvania Railroad", 200, 0);
 		Space seventeen = new OwnedSpace("St. James Place", 180, 40);
-		Space eighteen = new ActionSpace("Community Chest", 0, 0);
+		Space eighteen = new EmptySpace("Community Chest", 0, 0);
 		Space nineteen = new OwnedSpace("Tennessee Ave.", 180, 14);
 		Space twenty = new OwnedSpace("New York Ave.", 200, 16);
-		Space twentyone = new ActionSpace("Free Parking", 0,0);
+		Space twentyone = new EmptySpace("Free Parking", 0,0);
 		Space twentytwo = new OwnedSpace("Kentucky Ave.", 220, 18);
-		Space twentythree = new ActionSpace("CHANCE", 0,0);
+		Space twentythree = new EmptySpace("CHANCE", 0,0);
 		Space twentyfour = new OwnedSpace("Indina Ave.", 220, 18);
 		Space twentyfive = new OwnedSpace("Illinois Ave. ", 240, 20);
 		Space twentysix = new OwnedSpace("B. & O. Railroad", 200, 0);
@@ -52,15 +52,15 @@ public class Board {
 		Space twentyeight = new OwnedSpace("Ventnor Ave.", 260, 22);
 		Space twentynine = new OwnedSpace("Water Works", 150, 0);
 		Space thirty = new OwnedSpace("Marvin Gardens", 280, 22);
-		Space thirtyone = new ActionSpace("CHANCE", 0,0);
-		Space thirtytwo = new ActionSpace("GO TO JAIL",0,0);
+		Space thirtyone = new EmptySpace("CHANCE", 0,0);
+		Space thirtytwo = new EmptySpace("GO TO JAIL",0,0);
 		Space thirtythree = new OwnedSpace("Pacific Ave.", 300, 26);
 		Space thirtyfour = new OwnedSpace("North Carolina Ave.",300, 26 );
-		Space thirtyfive = new ActionSpace("Community Chest", 0,0);
+		Space thirtyfive = new EmptySpace("Community Chest", 0,0);
 		Space thirtysix = new OwnedSpace("Pennsylvania Ave.", 320, 28);
 		Space thirtyseven = new OwnedSpace("Short Line Rail Road", 200, 0);
 		Space thirtyeight = new OwnedSpace("Park Place", 350, 35);
-		Space thirtynine = new ActionSpace("LuxuryTax", 0 , 75);
+		Space thirtynine = new LuxuryTax("LuxuryTax", 0 , 75);
 		Space forty = new OwnedSpace("Board Walk", 400, 50);
 		
 		connectSpace(startSpace,two);

@@ -29,5 +29,9 @@ public class OwnedSpace extends Space {
 		this.rent = rent;
 	}
 
-
+	@Override
+	public void calculateRules(int value) {
+		// TODO Auto-generated method stub
+		
+	}
 }

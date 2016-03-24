@@ -1,6 +1,6 @@
 package valtech.germanTeam.bo;
 
-public class Space {
+public abstract class Space {
 	protected String spaceName;
 	protected Space nextSpace;
 	protected int position;
@@ -25,10 +25,10 @@ public class Space {
 	public void setNextSpace(Space space) {
 		this.nextSpace = space;
 	}
-
-
+	
 	public Space getNextSpace() {
 		
 		return nextSpace;
-	}
+	}	
+	public abstract void calculateRules(int value);
 }

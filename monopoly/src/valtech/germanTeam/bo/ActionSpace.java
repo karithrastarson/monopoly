@@ -1,6 +1,6 @@
 package valtech.germanTeam.bo;
 
-public class ActionSpace extends Space{
+public abstract class ActionSpace extends Space{
 
 	private int bonus;
 	private int payment;
@@ -27,6 +27,6 @@ public class ActionSpace extends Space{
 	public void setBonus(int bonus) {
 		this.bonus = bonus;
 	}
-
 	
+	public abstract void calculateRules(int value);
 }
