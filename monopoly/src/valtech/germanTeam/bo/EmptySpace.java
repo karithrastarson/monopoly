@@ -8,8 +8,8 @@ public class EmptySpace extends ActionSpace{
 	}
 
 	@Override
-	public void calculateRules(int value) {
-		// TODO Auto-generated method stub
+	public float calculateRules(float value) {
+		return value;
 		
 	}
 

@@ -30,5 +30,5 @@ public abstract class Space {
 		
 		return nextSpace;
 	}	
-	public abstract void calculateRules(int value);
+	public abstract float calculateRules(float value);
 }

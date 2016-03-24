@@ -28,5 +28,5 @@ public abstract class ActionSpace extends Space{
 		this.bonus = bonus;
 	}
 	
-	public abstract void calculateRules(int value);
+	public abstract float calculateRules(float value);
 }

@@ -30,8 +30,8 @@ public class OwnedSpace extends Space {
 	}
 
 	@Override
-	public void calculateRules(int value) {
-		// TODO Auto-generated method stub
+	public float calculateRules(float value) {
+		return value-rent;
 		
 	}
 }
