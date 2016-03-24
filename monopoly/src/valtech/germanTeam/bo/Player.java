@@ -27,7 +27,6 @@ public class Player {
 		return token;
 	}
 	
-	
 	public float getBudget() {
 		return budget;
 	}

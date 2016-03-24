@@ -15,16 +15,21 @@ public class Game implements IGame{
 	private Die die2;
 	private final int NUMBER_OF_TURNS = 20;
 	
-	public Game (int amountOfPlayers){
-		super();
-		
+	private static Game instance = null;
+	
+	private Game (int amountOfPlayers){
 			initBoard();
 			initPlayers(amountOfPlayers);
 			initDie();
-				
-			
 	}
-
+	
+	public static Game getInstance(int amountOfPlayers){
+		if(instance == null) {
+	         instance = new Game(amountOfPlayers);
+	      }
+		return instance;
+	}
+	
 	public void initPlayers(int amountOfPlayers){
 		
 		if(2  < amountOfPlayers && amountOfPlayers > 9){
