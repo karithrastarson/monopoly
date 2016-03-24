@@ -8,8 +8,10 @@ public class GoSpace extends ActionSpace{
 	}
 
 	@Override
-	public void calculateRules(int value) {
-		// TODO Auto-generated method stub
+	public float calculateRules(float value) {
+		//When a player lands on the GO space it gets 400 euros
+		
+		return value + 400;
 		
 	}
 
