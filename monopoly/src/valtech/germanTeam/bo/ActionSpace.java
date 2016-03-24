@@ -12,6 +12,13 @@ public class ActionSpace extends Space{
 		this.payment = payment;
 		// TODO Auto-generated constructor stub
 	}
+	public int getPayment() {
+		return payment;
+	}
+
+	public void setPayment(int payment) {
+		this.payment = payment;
+	}
 
 	public int getBonus() {
 		return bonus;

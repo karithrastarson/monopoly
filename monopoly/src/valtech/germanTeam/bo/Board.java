@@ -21,7 +21,7 @@ public class Board {
 		 * created in last iteration of the for loop
 		 * */
 		
-		startSpace = new ActionSpace("GO",0 , 0);
+		startSpace = new ActionSpace("GO", 0, 0);
 		
 		Space two = new OwnedSpace("Mediterranean Ave.", 60, 2);
 		Space  three= new ActionSpace("Community Chest", 0, 0);
@@ -52,6 +52,7 @@ public class Board {
 		Space twentyeight = new OwnedSpace("Ventnor Ave.", 260, 22);
 		Space twentynine = new OwnedSpace("Water Works", 150, 0);
 		Space thirty = new OwnedSpace("Marvin Gardens", 280, 22);
+		Space thirtyone = new ActionSpace("CHANCE", 0,0);
 		Space thirtytwo = new ActionSpace("GO TO JAIL",0,0);
 		Space thirtythree = new OwnedSpace("Pacific Ave.", 300, 26);
 		Space thirtyfour = new OwnedSpace("North Carolina Ave.",300, 26 );
@@ -67,12 +68,15 @@ public class Board {
 		connectSpace(three,four);
 		connectSpace(four,five);
 		connectSpace(five,six);
+		connectSpace(six,seven);
 		connectSpace(seven,eight);
 		connectSpace(eight,nine);
 		connectSpace(nine,ten);
 		connectSpace(ten,eleven);
 		connectSpace(eleven,twelve);
+		connectSpace(twelve,thirteen);
 		connectSpace(thirteen,fourteen);
+		connectSpace(fourteen,fifteen);
 		connectSpace(fifteen,sixteen);
 		connectSpace(sixteen,seventeen);
 		connectSpace(seventeen,eighteen);
@@ -88,7 +92,8 @@ public class Board {
 		connectSpace(twentyseven, twentyeight);
 		connectSpace(twentyeight, twentynine);
 		connectSpace(twentynine, thirty);
-		connectSpace(thirty, thirtytwo);
+		connectSpace(thirty, thirtyone);
+		connectSpace(thirtyone, thirtytwo);
 		connectSpace(thirtytwo, thirtythree);
 		connectSpace(thirtythree, thirtyfour);
 		connectSpace(thirtyfour, thirtyfive);
@@ -98,6 +103,7 @@ public class Board {
 		connectSpace(thirtyeight, thirtynine);
 		connectSpace(thirtynine, forty);
 		connectSpace(forty, startSpace);
+		
 		
 		/*Space memorySpace = spNext;
 		for(int i = 2; i < 40; i++){
