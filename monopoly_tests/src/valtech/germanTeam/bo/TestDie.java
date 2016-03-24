@@ -3,7 +3,9 @@ import static org.junit.Assert.*;
 import org.junit.Test;
 
 public class TestDie {
-
+	/*
+	 * checks if the die generates the right result 
+	 */
 	@Test
 	public void testDie(){
 		Die die = new Die();
